@@ -23,6 +23,7 @@ export const tradingRewardPairConfigChainMap: Record<FarmV3SupportedChainId, Com
   [ChainId.ZKSYNC]: zkSyncFarm,
   [ChainId.ZKSYNC_TESTNET]: [],
   [ChainId.ARBITRUM_ONE]: arbitrumFarm,
+  [ChainId.ARBITRUM_SEPOLIA]: [],
   [ChainId.LINEA]: lineaFarm,
   [ChainId.BASE]: baseFarm,
   [ChainId.OPBNB_TESTNET]: opBNBTestnetFarms,

@@ -2,6 +2,7 @@ import { ChainId } from '@pancakeswap/chains'
 import { Chain, createPublicClient, http, PublicClient } from 'viem'
 import {
   arbitrum,
+  arbitrumSepolia,
   bsc,
   bscTestnet,
   goerli,
@@ -219,6 +220,18 @@ const arbitrumOneClient = createPublicClient({
   pollingInterval: 6_000,
 })
 
+const arbitrumSepoliaClient = createPublicClient({
+  chain: arbitrumSepolia,
+  transport: http(ARBITRUM_SEPOLIA_NODE),
+  batch: {
+    multicall: {
+      batchSize: 1024 * 200,
+      wait: 16,
+    },
+  },
+  pollingInterval: 6_000,
+})
+
 const lineaClient = createPublicClient({
   chain: linea,
   transport: http(LINEA_NODE),
@@ -283,6 +296,8 @@ export const viemProviders = ({ chainId }: { chainId?: ChainId }): PublicClient 
       return zksyncClient
     case ChainId.ARBITRUM_ONE:
       return arbitrumOneClient
+    case ChainId.ARBITRUM_SEPOLIA:
+      return arbitrumSepoliaClient
     case ChainId.LINEA:
       return lineaClient
     case ChainId.BASE:

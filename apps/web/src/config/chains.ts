@@ -56,6 +56,7 @@ const bsc = {
  */
 export const L2_CHAIN_IDS: ChainId[] = [
   ChainId.ARBITRUM_ONE,
+  ChainId.ARBITRUM_SEPOLIA,
   ChainId.ARBITRUM_GOERLI,
   ChainId.POLYGON_ZKEVM,
   ChainId.POLYGON_ZKEVM_TESTNET,

@@ -180,6 +180,14 @@ export const CAKE = {
     'PancakeSwap Token',
     'https://pancakeswap.finance/',
   ),
+  [ChainId.ARBITRUM_SEPOLIA]: new ERC20Token(
+    ChainId.ARBITRUM_SEPOLIA,
+    '0x9939Df5Ee046843ebee46A9C861665d9E631A5be',
+    18,
+    'TTS',
+    'TTS Token',
+    'https://pancakeswap.finance/',
+  ),
   [ChainId.ARBITRUM_GOERLI]: new ERC20Token(
     ChainId.ARBITRUM_GOERLI,
     '0x62FF25CFD64E55673168c3656f4902bD7Aa5F0f4',
@@ -254,6 +262,13 @@ export const USDC = {
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
     ChainId.ARBITRUM_ONE,
     '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
+    6,
+    'USDC',
+    'USD Coin',
+  ),
+  [ChainId.ARBITRUM_SEPOLIA]: new ERC20Token(
+    ChainId.ARBITRUM_SEPOLIA,
+    '0x39E618D761fdD06bF65065d2974128aAeC7b3Fed',
     6,
     'USDC',
     'USD Coin',
@@ -366,6 +381,7 @@ export const STABLE_COIN = {
   [ChainId.BSC]: USDT[ChainId.BSC],
   [ChainId.BSC_TESTNET]: BUSD[ChainId.BSC_TESTNET],
   [ChainId.ARBITRUM_ONE]: USDC[ChainId.ARBITRUM_ONE],
+  [ChainId.ARBITRUM_SEPOLIA]: USDC[ChainId.ARBITRUM_SEPOLIA],
   [ChainId.ARBITRUM_GOERLI]: USDC[ChainId.ARBITRUM_GOERLI],
   [ChainId.ZKSYNC]: USDC[ChainId.ZKSYNC],
   [ChainId.ZKSYNC_TESTNET]: USDC[ChainId.ZKSYNC_TESTNET],

@@ -1,6 +1,7 @@
 import { ChainId } from '@pancakeswap/chains'
 import { ERC20Token } from '@pancakeswap/sdk'
 import {
+  arbitrumSepoliaTokens,
   arbitrumTokens,
   baseTokens,
   bscTestnetTokens,
@@ -44,6 +45,10 @@ export const priceHelperTokens = {
     chain: 'arbitrum',
     list: [arbitrumTokens.weth, arbitrumTokens.usdc, arbitrumTokens.usdt, arbitrumTokens.arb, arbitrumTokens.usdplus],
   },
+  [ChainId.ARBITRUM_SEPOLIA]: {
+    chain: 'arbitrumSepolia',
+    list: [arbitrumSepoliaTokens.weth, arbitrumSepoliaTokens.usdc],
+  },
   [ChainId.LINEA]: {
     chain: 'linea',
     list: [lineaTokens.weth, lineaTokens.usdc, lineaTokens.usdt, lineaTokens.wbtc, lineaTokens.dai],
@@ -78,6 +83,7 @@ export const DEFAULT_COMMON_PRICE: Record<FarmV3SupportedChainId, CommonPrice> =
   [ChainId.ZKSYNC]: {},
   [ChainId.POLYGON_ZKEVM_TESTNET]: {},
   [ChainId.ARBITRUM_ONE]: {},
+  [ChainId.ARBITRUM_SEPOLIA]: {},
   [ChainId.LINEA]: {},
   [ChainId.BASE]: {},
   [ChainId.OPBNB_TESTNET]: {},

@@ -1,23 +1,24 @@
-import { Token } from '@pancakeswap/sdk'
 import { ChainId } from '@pancakeswap/chains'
+import { Token } from '@pancakeswap/sdk'
 import {
-  ethereumTokens,
-  bscTokens,
+  arbitrumGoerliTokens,
+  arbitrumSepoliaTokens,
+  arbitrumTokens,
+  baseTestnetTokens,
+  baseTokens,
   bscTestnetTokens,
+  bscTokens,
+  ethereumTokens,
   goerliTestnetTokens,
-  polygonZkEvmTokens,
+  lineaTestnetTokens,
+  lineaTokens,
+  opBnbTestnetTokens,
+  opBnbTokens,
   polygonZkEvmTestnetTokens,
+  polygonZkEvmTokens,
+  scrollSepoliaTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
-  lineaTokens,
-  lineaTestnetTokens,
-  arbitrumGoerliTokens,
-  arbitrumTokens,
-  baseTokens,
-  baseTestnetTokens,
-  opBnbTokens,
-  opBnbTestnetTokens,
-  scrollSepoliaTokens,
 } from '@pancakeswap/tokens'
 
 export const usdGasTokensByChain = {
@@ -26,6 +27,7 @@ export const usdGasTokensByChain = {
   [ChainId.BSC]: [bscTokens.usdt],
   [ChainId.BSC_TESTNET]: [bscTestnetTokens.usdt],
   [ChainId.ARBITRUM_ONE]: [arbitrumTokens.usdc],
+  [ChainId.ARBITRUM_SEPOLIA]: [arbitrumSepoliaTokens.usdc],
   [ChainId.ARBITRUM_GOERLI]: [arbitrumGoerliTokens.usdc],
   [ChainId.POLYGON_ZKEVM]: [polygonZkEvmTokens.usdt],
   [ChainId.POLYGON_ZKEVM_TESTNET]: [polygonZkEvmTestnetTokens.usdt],
@@ -40,6 +42,6 @@ export const usdGasTokensByChain = {
   [ChainId.SCROLL_SEPOLIA]: [scrollSepoliaTokens.usdc],
 } satisfies Record<ChainId, Token[]>
 
+export * from './stableSwap'
 export * from './v2'
 export * from './v3'
-export * from './stableSwap'

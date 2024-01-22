@@ -20,6 +20,7 @@ export const BATCH_MULTICALL_CONFIGS: ChainMap<BatchMulticallConfigs> = {
   [ChainId.ETHEREUM]: DEFAULT,
   [ChainId.GOERLI]: DEFAULT,
   [ChainId.ARBITRUM_ONE]: DEFAULT,
+  [ChainId.ARBITRUM_SEPOLIA]: DEFAULT,
   [ChainId.ARBITRUM_GOERLI]: DEFAULT,
   [ChainId.POLYGON_ZKEVM]: {
     defaultConfig: {

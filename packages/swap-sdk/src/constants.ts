@@ -1,5 +1,5 @@
-import { Percent } from '@pancakeswap/swap-sdk-core'
 import { ChainId } from '@pancakeswap/chains'
+import { Percent } from '@pancakeswap/swap-sdk-core'
 import { Address, Hash } from 'viem'
 import { ERC20Token } from './entities/token'
 
@@ -16,6 +16,7 @@ export const FACTORY_ADDRESS_MAP = {
   [ChainId.BSC]: FACTORY_ADDRESS,
   [ChainId.BSC_TESTNET]: '0x6725F303b657a9451d8BA641348b6761A6CC7a17',
   [ChainId.ARBITRUM_ONE]: '0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E',
+  [ChainId.ARBITRUM_SEPOLIA]: '0xe400fA08D7e7f113578cF874443c13F782F4E5b4',
   [ChainId.ARBITRUM_GOERLI]: '0x333EAE459075b1d7dE8eb57997b5d4eee5F1070a',
   [ChainId.POLYGON_ZKEVM]: '0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E',
   [ChainId.POLYGON_ZKEVM_TESTNET]: '0xBA40c83026213F9cbc79998752721a0312bdB74a',
@@ -39,6 +40,7 @@ export const INIT_CODE_HASH_MAP = {
   [ChainId.BSC]: INIT_CODE_HASH,
   [ChainId.BSC_TESTNET]: '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66',
   [ChainId.ARBITRUM_ONE]: INIT_CODE_HASH_ETH,
+  [ChainId.ARBITRUM_SEPOLIA]: '4dbf13f750ae4feb676a7d15da9394e8e3b6a15b4053359f1118c4eaa4c9322e',
   [ChainId.ARBITRUM_GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.POLYGON_ZKEVM]: INIT_CODE_HASH_ETH,
   [ChainId.POLYGON_ZKEVM_TESTNET]: INIT_CODE_HASH_ETH,
@@ -89,6 +91,14 @@ export const WETH9 = {
   [ChainId.ARBITRUM_ONE]: new ERC20Token(
     ChainId.ARBITRUM_ONE,
     '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+    18,
+    'WETH',
+    'Wrapped Ether',
+    'https://weth.io'
+  ),
+  [ChainId.ARBITRUM_SEPOLIA]: new ERC20Token(
+    ChainId.ARBITRUM_SEPOLIA,
+    '0xceBD1a3E9aaD7E60eDD509809e7f9cFF449b7851',
     18,
     'WETH',
     'Wrapped Ether',
@@ -241,6 +251,7 @@ export const WNATIVE = {
   [ChainId.BSC]: WBNB[ChainId.BSC],
   [ChainId.BSC_TESTNET]: WBNB[ChainId.BSC_TESTNET],
   [ChainId.ARBITRUM_ONE]: WETH9[ChainId.ARBITRUM_ONE],
+  [ChainId.ARBITRUM_SEPOLIA]: WETH9[ChainId.ARBITRUM_SEPOLIA],
   [ChainId.ARBITRUM_GOERLI]: WETH9[ChainId.ARBITRUM_GOERLI],
   [ChainId.POLYGON_ZKEVM]: WETH9[ChainId.POLYGON_ZKEVM],
   [ChainId.POLYGON_ZKEVM_TESTNET]: WETH9[ChainId.POLYGON_ZKEVM_TESTNET],
@@ -272,6 +283,7 @@ export const NATIVE = {
     decimals: 18,
   },
   [ChainId.ARBITRUM_ONE]: ETHER,
+  [ChainId.ARBITRUM_SEPOLIA]: ETHER,
   [ChainId.ARBITRUM_GOERLI]: {
     name: 'Arbitrum Goerli Ether',
     symbol: 'AGOR',
